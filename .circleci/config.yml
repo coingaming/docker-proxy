@@ -34,7 +34,7 @@ workflows:
     triggers:
       - schedule:
           <<: *filters
-          cron: "0 5 * * *"  # 05:00 UTC
+          cron: "0 6 * * *"  # 05:00 UTC
     jobs:
       - release:
           <<: *filters
