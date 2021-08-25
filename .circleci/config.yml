@@ -1,5 +1,10 @@
 version: 2.1
 
+configure: &configure
+  docker:
+    - image: buildpack-deps:trusty
+  resource_class: small
+
 release: &release
   run:
     name: Create release
@@ -12,11 +17,13 @@ filters: &filters
 
 jobs:
   release:
+    <<: *configure
     steps:
     - checkout
     - setup_remote_docker
     - *release
   release-publish:
+    <<: *configure
     steps:
     - checkout
     - setup_remote_docker
