@@ -2,8 +2,7 @@ version: 2.1
 
 configure: &configure
   docker:
-    - image: buildpack-deps:trusty
-    - image: docker:stable-git
+    - image: cimg/base:2021.04
   resource_class: small
 
 release: &release
