@@ -2,7 +2,7 @@ version: 2.1
 
 configure: &configure
   docker:
-    - image: buildpack-deps:trusty
+    - image: docker:stable-git
   resource_class: small
 
 release: &release
