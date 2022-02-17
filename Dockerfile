@@ -10,7 +10,7 @@ stream { \n\
                    '\$protocol \$status \$bytes_sent \$bytes_received ' \n\
                    '\$session_time'; \n\
   server { \n\
-    listen 8081; \n\
+    listen 443; \n\
     resolver 127.0.0.11 [::1]; \n\
     proxy_pass \$ssl_preread_server_name:443; \n\
     ssl_preread on; \n\
